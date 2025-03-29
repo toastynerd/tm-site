@@ -1,5 +1,5 @@
 ---
-title: "Building This Blog"
+title: "Building This Blog (AI-Generated)"
 date: "2024-03-29"
 description: "A look at the process of building this blog using Next.js, MDX, and AI assistance"
 ai_generated: true

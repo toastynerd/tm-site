@@ -1,5 +1,5 @@
 ---
-title: "Code Examples"
+title: "Code Examples (AI-Generated)"
 date: "2024-03-29"
 description: "A demonstration of syntax highlighting for various programming languages"
 ai_generated: true

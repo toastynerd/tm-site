@@ -1,5 +1,5 @@
 ---
-title: "Hello World"
+title: "Hello World (AI-Generated)"
 date: "2024-03-29"
 description: "First blog post to test the blog functionality"
 ai_generated: true
