@@ -1,15 +1,14 @@
 import { getBlogPostBySlug, markdownToHtml } from '@/lib/markdown';
 import { notFound } from 'next/navigation';
 import BlogPostContent from '@/components/BlogPostContent';
-import type { PageProps } from 'next';
 
-type BlogPostParams = {
-  slug: string;
-};
-
-export default async function BlogPostPage({ params }: PageProps<BlogPostParams>) {
+export default async function BlogPostPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   try {
-    const slug = params.slug;
+    const { slug } = await params;
     console.log('Loading blog post:', slug);
     
     const post = getBlogPostBySlug(slug);
