@@ -6,9 +6,10 @@ interface BlogPostPageProps {
   params: {
     slug: string;
   };
+  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function BlogPostPage({ params, searchParams }: BlogPostPageProps) {
   try {
     const slug = params.slug;
     console.log('Loading blog post:', slug);
