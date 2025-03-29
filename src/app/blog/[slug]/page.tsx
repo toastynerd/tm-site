@@ -1,5 +1,6 @@
 import { getBlogPostBySlug, markdownToHtml } from '@/lib/markdown';
 import { notFound } from 'next/navigation';
+import BlogPostContent from '@/components/BlogPostContent';
 
 interface BlogPostPageProps {
   params: {
@@ -9,14 +10,19 @@ interface BlogPostPageProps {
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   try {
-    const slug = await Promise.resolve(params.slug);
+    const slug = params.slug;
+    console.log('Loading blog post:', slug);
+    
     const post = getBlogPostBySlug(slug);
+    console.log('Found post:', { title: post.title, contentLength: post.content.length });
+    
     const content = await markdownToHtml(post.content);
+    console.log('Converted markdown to HTML, length:', content.length);
 
     return (
       <article className="mx-auto max-w-3xl px-6 py-24 sm:py-32 lg:px-8">
         <header className="mb-8">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-100 sm:text-5xl">
             {post.title}
           </h1>
           <time
@@ -30,13 +36,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             })}
           </time>
         </header>
-        <div
-          className="prose prose-lg dark:prose-invert max-w-none"
-          dangerouslySetInnerHTML={{ __html: content }}
-        />
+        <BlogPostContent content={content} />
       </article>
     );
   } catch (error) {
+    console.error('Error loading blog post:', error);
     notFound();
   }
 } 

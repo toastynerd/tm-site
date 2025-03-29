@@ -14,6 +14,33 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            pre: {
+              backgroundColor: '#2d2d2d',
+              color: '#ccc',
+              padding: '1rem',
+              borderRadius: '0.5rem',
+              marginTop: '1.5rem',
+              marginBottom: '1.5rem',
+            },
+            code: {
+              backgroundColor: '#2d2d2d',
+              color: '#ccc',
+              padding: '0.2rem 0.4rem',
+              borderRadius: '0.25rem',
+              fontWeight: '400',
+              '&::before': {
+                content: '""',
+              },
+              '&::after': {
+                content: '""',
+              },
+            },
+          },
+        },
+      },
     },
   },
   plugins: [
