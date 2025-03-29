@@ -69,7 +69,7 @@ export default function ContactPage() {
         <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Connect with me</h2>
         <div className="mt-6 flex justify-center gap-x-6">
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/toastynerd"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
@@ -84,7 +84,7 @@ export default function ContactPage() {
             </svg>
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://www.linkedin.com/in/tyler-morgan-b3a82853/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
@@ -98,7 +98,7 @@ export default function ContactPage() {
               />
             </svg>
           </a>
-          <EmailReveal email="your.email@example.com" />
+          <EmailReveal email="tylermorgan86@gmail.com" />
         </div>
       </div>
     </div>
