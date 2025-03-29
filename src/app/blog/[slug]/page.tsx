@@ -6,11 +6,9 @@ interface BlogPostPageProps {
   params: {
     slug: string;
   };
-  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-// We need searchParams for Next.js types but don't use it in this component
-export default async function BlogPostPage({ params, searchParams: _ }: BlogPostPageProps) {
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
   try {
     const slug = params.slug;
     console.log('Loading blog post:', slug);
