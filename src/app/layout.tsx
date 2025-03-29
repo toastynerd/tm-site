@@ -7,8 +7,8 @@ import { ThemeProvider } from "next-themes";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Name - Personal Site",
-  description: "Welcome to my personal site where I share my thoughts and projects.",
+  title: "Tyler Morgan",
+  description: "Personal site of Tyler Morgan",
 };
 
 export default function RootLayout({
@@ -18,10 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-white dark:bg-black min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Navigation />
-          <main className="pt-16 min-h-screen bg-white dark:bg-gray-900">
+          <main className="pt-16">
             {children}
           </main>
         </ThemeProvider>
