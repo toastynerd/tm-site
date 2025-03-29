@@ -1,0 +1,30 @@
+name: Deploy to Production
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Are you sure you want to deploy to production?'
+        required: true
+        type: boolean
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.confirm }}
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Set up Git
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          
+      - name: Update production branch
+        run: |
+          git checkout production
+          git merge main --no-ff -m "chore: merge main into production for deployment"
+          git push origin production 

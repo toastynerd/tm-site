@@ -1,4 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Blog
+
+A Next.js-powered personal blog with markdown support and syntax highlighting.
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Deployment
+
+This project uses a production branch strategy for deployments:
+
+- `main` branch is used for development
+- `production` branch is used for deployment to AWS Amplify
+
+### Deploying to Production
+
+1. Make sure your changes are merged into the `main` branch
+2. Go to the "Actions" tab in GitHub
+3. Select the "Deploy to Production" workflow
+4. Click "Run workflow"
+5. Confirm the deployment
+
+The GitHub Action will:
+1. Merge the `main` branch into `production`
+2. Push the changes to GitHub
+3. AWS Amplify will automatically detect the changes and deploy them
+
+### AWS Amplify Configuration
+
+The deployment is configured using `amplify.yml` in the root directory. The build process:
+1. Installs dependencies using `npm ci`
+2. Builds the application using `npm run build`
+3. Deploys the `.next` directory
+
+## Tech Stack
+
+- Next.js 15
+- TypeScript
+- Tailwind CSS
+- MDX for blog posts
+- highlight.js for syntax highlighting
 
 ## Getting Started
 
