@@ -12,25 +12,7 @@ const projects = [
       color: 'success'
     },
     technologies: ['Python', 'Docker', 'Linux', 'Ollama'],
-  },
-  {
-    name: 'Project 1',
-    description: 'A brief description of your first project and what technologies you used.',
-    link: '#',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-  },
-  {
-    name: 'Project 2',
-    description: 'A brief description of your second project and what technologies you used.',
-    link: '#',
-    technologies: ['Next.js', 'Node.js', 'PostgreSQL'],
-  },
-  {
-    name: 'Project 3',
-    description: 'A brief description of your third project and what technologies you used.',
-    link: '#',
-    technologies: ['Python', 'Django', 'Docker'],
-  },
+  }
 ];
 
 export default function ProjectsPage() {
