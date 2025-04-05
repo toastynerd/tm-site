@@ -17,6 +17,15 @@ const config: Config = {
       typography: {
         DEFAULT: {
           css: {
+            p: {
+              marginTop: '1.5em',
+              marginBottom: '1.5em',
+              lineHeight: '1.8',
+            },
+            'h1, h2, h3': {
+              marginTop: '2.5em',
+              marginBottom: '1em',
+            },
             pre: {
               backgroundColor: '#2d2d2d',
               color: '#ccc',

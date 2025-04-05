@@ -3,6 +3,17 @@ import { FolderIcon } from '@heroicons/react/24/outline';
 
 const projects = [
   {
+    name: 'Ollama Agent',
+    description: 'A command-line interface agent that can interact with Ollama and execute Linux commands with confirmation.',
+    link: 'https://github.com/toastynerd/ollama-agent',
+    badge: {
+      text: 'tests',
+      link: 'https://github.com/toastynerd/ollama-agent/actions',
+      color: 'success'
+    },
+    technologies: ['Python', 'Docker', 'Linux', 'Ollama'],
+  },
+  {
     name: 'Project 1',
     description: 'A brief description of your first project and what technologies you used.',
     link: '#',
@@ -56,6 +67,16 @@ export default function ProjectsPage() {
                     <span className="absolute inset-0" />
                     {project.name}
                   </Link>
+                  {project.badge && (
+                    <a
+                      href={project.badge.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-2 inline-flex items-center rounded-md bg-green-50 dark:bg-green-900/30 px-2 py-1 text-xs font-medium text-green-700 dark:text-green-400 ring-1 ring-inset ring-green-600/20 dark:ring-green-500/30"
+                    >
+                      {project.badge.text}
+                    </a>
+                  )}
                 </h3>
                 <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-300">
                   {project.description}

@@ -6,9 +6,10 @@ interface BlogPostContentProps {
 
 export default function BlogPostContent({ content }: BlogPostContentProps) {
   return (
-    <article
+    <div 
       className="prose prose-lg dark:prose-invert max-w-none"
       dangerouslySetInnerHTML={{ __html: content }}
+      suppressHydrationWarning
     />
   );
 } 
