@@ -1,6 +1,6 @@
 ---
 title: "Working with Cursor"
-date: "2024-03-29"
+date: "2025-03-29"
 description: "My experience and tips for working with Cursor, the AI-powered IDE"
 ---
 

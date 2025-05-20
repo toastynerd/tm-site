@@ -12,6 +12,18 @@ const projects = [
       color: 'success'
     },
     technologies: ['Python', 'Docker', 'Linux', 'Ollama'],
+  },
+  {
+    name: 'QuickShare',
+    description: 'A lightweight web application for temporary file sharing between devices with no account registration required.',
+    link: 'https://github.com/toastynerd/file-share-app',
+    technologies: ['Python', 'Flask', 'Web'],
+  },
+  {
+    name: 'Emacs MCP Tools',
+    description: 'A Node.js server that enables Claude Code to interact with a running Emacs instance using the Model Context Protocol.',
+    link: 'https://github.com/toastynerd/emacs-mcp-server',
+    technologies: ['JavaScript', 'Node.js', 'Emacs', 'MCP'],
   }
 ];
 
