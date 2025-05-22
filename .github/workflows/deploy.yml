@@ -9,9 +9,35 @@ on:
         type: boolean
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.confirm }}
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: |
+          npm clean-install --no-audit --prefer-offline || npm install --no-audit --prefer-offline
+          npm ls --depth=0
+        
+      - name: Run linting
+        run: |
+          npm run lint
+          npm run lint:md
+          
+      - name: Run tests
+        run: npm test
+  
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     

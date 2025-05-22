@@ -1,0 +1,5 @@
+# Run markdown linter
+npm run lint:md
+
+# Run Next.js linting
+npm run lint
