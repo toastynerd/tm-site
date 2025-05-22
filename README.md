@@ -49,6 +49,8 @@ The deployment is configured using `amplify.yml` in the root directory. The buil
 - Tailwind CSS
 - MDX for blog posts
 - highlight.js for syntax highlighting
+- Markdown linter for blog post frontmatter validation
+- Playwright tests for UI validation
 
 ## Getting Started
 
