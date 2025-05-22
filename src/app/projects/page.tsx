@@ -57,7 +57,7 @@ export default function ProjectsPage() {
               </div>
               <div className="group relative">
                 <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300">
-                  <Link href={project.link}>
+                  <Link href={project.link} target="_blank" rel="noopener noreferrer">
                     <span className="absolute inset-0" />
                     {project.name}
                   </Link>
