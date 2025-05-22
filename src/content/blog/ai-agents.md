@@ -1,7 +1,7 @@
 ---
 title: "Using AI to build simple AI agents"
 description: "Building things fast, breaking stuff and is this Skynet yet?"
-pubDate: "2025-03-19"
+date: "2025-03-19"
 --- 
 
 # AI Agents
