@@ -29,5 +29,16 @@ jobs:
           npm run lint
           npm run lint:md
           
-      - name: Run tests
+      - name: Run unit tests
         run: npm test
+        
+      - name: Install Playwright
+        run: npx playwright install --with-deps chromium
+        
+      - name: Build and start server for E2E tests
+        run: |
+          npm run build
+          npm run start & sleep 10
+          
+      - name: Run E2E tests
+        run: npm run test:e2e
