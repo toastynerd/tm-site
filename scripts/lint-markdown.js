@@ -12,13 +12,7 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
-
-// Use CommonJS compatible version of chalk
-const chalk = {
-  red: (text) => `\x1b[31m${text}\x1b[0m`,
-  green: (text) => `\x1b[32m${text}\x1b[0m`,
-  blue: (text) => `\x1b[34m${text}\x1b[0m`
-};
+const chalk = require('chalk');
 
 // Configuration
 const BLOG_DIR = path.join(process.cwd(), 'src/content/blog');
