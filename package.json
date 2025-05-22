@@ -2,7 +2,6 @@
   "name": "blog",
   "version": "0.1.0",
   "private": true,
-  "type": "commonjs",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
@@ -11,7 +10,9 @@
     "lint:md": "node scripts/lint-markdown.js",
     "prepare": "husky",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "test:e2e": "node playwright/blog-sort-test.js",
+    "test:e2e:full": "./scripts/run-e2e-tests.sh"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
